@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Epicwappy20's site</title>
+    <style>
+        h1 {
+            color: darkorange
+        }
+
+    h2 {color: yellow}
+
+    
+
+    body {background-color: orangered;
+              font-family: sans-serif;
+    }
+        .wappy {
+            border-radius: 50%;
+            box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+            transition: all ease-in-out .2s;
+        }
+            .wappy:hover {
+                box-shadow: 0 8px 12px 0 rgba(34,60,80,.16);
+            }
+    </style>
+</head>
+<body>
+
+    <h1> Epicwappy20's website </h1>
+    <p> hello! im doing programming and learning HTML and CSS and JS</p>
+
+    <img id="wappy" src="img/unnamed.png" style="position : absolute; left:650px; top:450px" width="200" height="200" />
+    
+    <script>
+        var four = 2 + 2;
+        var looper;
+        var degrees = 0;
+        function rotateAnimation(el, speed) {
+            var elem = document.getElementById(el);
+            if (navigator.userAgent.match("Chrome")) {
+                elem.style.WebkitTransform = "rotate(" + degrees + "deg)";
+            } else if (navigator.userAgent.match("Firefox")) {
+                elem.style.MozTransform = "rotate(" + degrees + "deg)";
+            } else if (navigator.userAgent.match("MSIE")) {
+                elem.style.msTransform = "rotate(" + degrees + "deg)";
+            } else if (navigator.userAgent.match("Opera")) {
+                elem.style.OTransform = "rotate(" + degrees + "deg)";
+            } else {
+                elem.style.transform = "rotate(" + degrees + "deg)";
+            }
+            looper = setTimeout('rotateAnimation(\'' + el + '\',' + speed + ')', speed);
+            degrees++;
+            if (degrees > 359) {
+                degrees = 1;
+            }
+            document.getElementById("status").innerHTML = "rotate(" + degrees + "deg)";
+        }
+    </script>
+    <script>rotateAnimation("wappy", 70);</script>
+    <a href="epicwappysis.html">Epicwappysis's page</a>
+    <a href="home.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="funstuff1.html">experements with objects and JS</a>
+    <a href="Funstuff2.html">More experements with objects and JS</a>
+    <a href="funstuff3.html">Even More experements with objects and JS</a>
+    <a href="usernames.html">usernames</a>
+    <a href="Nothing.html">nothing here yet</a>
+    <a href="nothing.html">Nothing here yet</a>
+    <a href="nothing.html">Nothing here yet</a>
+    <a href="nothing.html">Nothing here yet</a>
+</body>
+</html>

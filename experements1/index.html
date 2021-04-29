@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>spinning wappys</title>
+</head>
+<body>
+    <h1>Fun stuff</h1>
+    <p>hehe wappydogs go brrrr</p>
+    <a href="epicwappysis.html">Epicwappysis's page</a>
+    <a href="home.html">Home</a>
+    <a href="games.html">Games</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="funstuff1.html">experements with objects and JS</a>
+    <a href="Funstuff2.html">More experements with objects and JS</a>
+    <a href="funstuff3.html">Even More experements with objects and JS</a>
+    <a href="Nothing.html">nothing here yet</a>
+    <a href="nothing.html">Nothing here yet</a>
+    <a href="nothing.html">Nothing here yet</a>
+    <a href="nothing.html">Nothing here yet</a>
+    <a href="usernames.html">usernames</a>
+    <img id="wappy" src="img/unnamed.png" style="position : absolute; left:1050px; top:450px" width="200" height="200" />
+    <img id="wappy2" src="img/unnamed.png" style="position : absolute; left:850px; top:450px" width="200" height="200" />
+    <img id="wappy3" src="img/unnamed.png" style="position : absolute; left:50px; top:450px" width="200" height="200" />
+    <img id="wappy4" src="img/unnamed.png" style="position : absolute; left:150px; top:450px" width="200" height="200" />
+    <img id="wappy5" src="img/unnamed.png" style="position : absolute; left:250px; top:450px" width="200" height="200" />
+    <img id="wappy6" src="img/unnamed.png" style="position : absolute; left:350px; top:450px" width="200" height="200" />
+    <img id="wappy7" src="img/unnamed.png" style="position : absolute; left:450px; top:450px" width="200" height="200" />
+    <img id="wappy8" src="img/unnamed.png" style="position : absolute; left:550px; top:450px" width="200" height="200" />
+    <img id="wappy9" src="img/unnamed.png" style="position : absolute; left:650px; top:450px" width="200" height="200" />
+    <img id="wappy10" src="img/unnamed.png" style="position : absolute; left:750px; top:450px" width="200" height="200" />
+    <style>
+        body {
+            background-color: orange;
+            font-family: sans-serif
+        }
+
+        p {
+            color: yellow
+        }
+
+        h1 {
+            color: orangered
+        }
+    </style>
+    <script>
+        var four = 2 + 2;
+        var looper;
+        var degrees = 0;
+        function rotateAnimation(el, speed) {
+            var elem = document.getElementById(el);
+            if (navigator.userAgent.match("Chrome")) {
+                elem.style.WebkitTransform = "rotate(" + degrees + "deg)";
+            } else if (navigator.userAgent.match("Firefox")) {
+                elem.style.MozTransform = "rotate(" + degrees + "deg)";
+            } else if (navigator.userAgent.match("MSIE")) {
+                elem.style.msTransform = "rotate(" + degrees + "deg)";
+            } else if (navigator.userAgent.match("Opera")) {
+                elem.style.OTransform = "rotate(" + degrees + "deg)";
+            } else {
+                elem.style.transform = "rotate(" + degrees + "deg)";
+            }
+            looper = setTimeout('rotateAnimation(\'' + el + '\',' + speed + ')', speed);
+            degrees++;
+            if (degrees > 359) {
+                degrees = 1;
+            }
+            document.getElementById("status").innerHTML = "rotate(" + degrees + "deg)";
+        }
+    </script>
+    <script>rotateAnimation("wappy", 70);</script>
+    <script>rotateAnimation("wappy2", 70);</script>
+    <script>rotateAnimation("wappy3", 70);</script>
+    <script>rotateAnimation("wappy4", 70);</script>
+    <script>rotateAnimation("wappy5", 70);</script>
+    <script>rotateAnimation("wappy6", 70);</script>
+    <script>rotateAnimation("wappy7", 70);</script>
+    <script>rotateAnimation("wappy8", 70);</script>
+    <script>rotateAnimation("wappy9", 70);</script>
+    <script>rotateAnimation("wappy10", 70);</script>
+</body>
+</html>
